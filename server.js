@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 8000;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use(express.static('./config'));
+app.use(express.static('./public'));
 
 // ================================================================================
 // ROUTER
@@ -30,9 +30,9 @@ app.use(express.json());
 const apiRoutes = require("./app/routing/apiRoutes");
 app.use('/api', apiRoutes);
 
-// const clientRoutes = require('./routes/clientRoutes');
-// app.use('/', clientRoutes);
-
+const htmlRoutes = require('./app/routing/htmlRoutes');
+app.use('/', htmlRoutes);
+// require("./app/routing/htmlRoutes")(app);
 
 // =============================================================================
 // LISTENER
