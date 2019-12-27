@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Friend Finder</title>
+    <title>Friend Finder Survey</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 
 </head>
 
@@ -27,19 +28,19 @@
                 <label for="name">Name (Required)</label>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="name">First Name / Last Name</span>
+                        <span class="input-group-text">Full Name</span>
                     </div>
-                    <input type="text" aria-label="First name" class="form-control">
-                    <input type="text" aria-label="Last name" class="form-control">
+                    <input type="text" class="form-control" id="name">
+
                 </div>
 
 
                 <label for="basic-url">Link to Photo Image (required)</label>
                 <div class="input-group mb-5">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                        <span class="input-group-text">https://example.com/users/</span>
                     </div>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    <input type="text" class="form-control" id="picture">
                 </div>
                 <div class="dropdown-divider"></div>
             </div>
@@ -47,13 +48,13 @@
             <div class="row">
                 <div class="questions col-sm-8 offset-sm-2 mt-3 text-center">
                     <div class="form-group ">
-                        <label for="FormControlSelect1">
+                        <label for="Q1">
                             <h3 class="text-info">Question 1</h3>
                             <h4>You try to spend as much time as possible with your family, even if you have to travel
                                 to
                                 see them. After all they are a very important part of your life.</h4>
                         </label>
-                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="FormControlSelect1">
+                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q1">
                             <option>1 - (Strongly Disagree)</option>
                             <option>2 - (Disagree)</option>
                             <option>3 - (Indiferent)</option>
@@ -63,11 +64,11 @@
                         <div class="dropdown-divider"></div>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="FormControlSelect2">
+                        <label for="Q2">
                             <h3 class="text-center text-info">Question 2</h3>
                             <h4>Speaking of travel you are a globe trotter, traveling is very important for you!</h4>
                         </label>
-                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="FormControlSelect2">
+                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q2">
                             <option>1 (Strongly Disagree)</option>
                             <option>2 (Disagree)</option>
                             <option>3 (Indiferent)</option>
@@ -77,11 +78,11 @@
                         <div class="dropdown-divider"></div>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="FormControlSelect3">
+                        <label for="Q3">
                             <h3 class="text-center text-info">Question 3</h3>
                             <h4>You love animals and can't imagine living without a pet by your side!</h4>
                         </label>
-                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="FormControlSelect3">
+                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q3">
                             <option>1 (Strongly Disagree)</option>
                             <option>2 (Disagree)</option>
                             <option>3 (Indiferent)</option>
@@ -91,11 +92,11 @@
                         <div class="dropdown-divider"></div>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="FormControlSelect4">
+                        <label for="Q4">
                             <h3 class="text-center text-info">Question 4</h3>
                             <h4>Would you have your little toe surgically removed for $1,000,000?</h4>
                         </label>
-                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="FormControlSelect4">
+                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q4">
                             <option>1 (Strongly Disagree)</option>
                             <option>2 (Disagree)</option>
                             <option>3 (Indiferent)</option>
@@ -105,11 +106,11 @@
                         <div class="dropdown-divider"></div>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="FormControlSelect5">
+                        <label for="Q5">
                             <h3 class="text-center text-info">Question 5</h3>
                             <h4>You prefer to watch movies over reading books.</h4>
                         </label>
-                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="FormControlSelect5">
+                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q5">
                             <option>1 (Strongly Disagree)</option>
                             <option>2 (Disagree)</option>
                             <option>3 (Indiferent)</option>
@@ -119,12 +120,12 @@
                         <div class="dropdown-divider"></div>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="FormControlSelect6">
+                        <label for="Q6">
                             <h3 class="text-center text-info">Question 6</h3>
                             <h4>You love to go out with your firends, anytime is an opportunity to hang out and party!
                             </h4>
                         </label>
-                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="FormControlSelect6">
+                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q6">
                             <option>1 (Strongly Disagree)</option>
                             <option>2 (Disagree)</option>
                             <option>3 (Indiferent)</option>
@@ -134,11 +135,11 @@
                         <div class="dropdown-divider"></div>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="FormControlSelect7">
+                        <label for="Q7">
                             <h3 class="text-center text-info">Question 7</h3>
                             <h4>Would you or have you ever go swimming with sharks?</h4>
                         </label>
-                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="FormControlSelect7">
+                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q7">
                             <option>1 (Strongly Disagree)</option>
                             <option>2 (Disagree)</option>
                             <option>3 (Indiferent)</option>
@@ -148,11 +149,11 @@
                         <div class="dropdown-divider"></div>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="FormControlSelect8">
+                        <label for="Q8">
                             <h3 class="text-center text-info">Question 8</h3>
                             <h4>You love tattoos and have a few of your own.</h4>
                         </label>
-                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="FormControlSelect8">
+                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q8">
                             <option>1 (Strongly Disagree)</option>
                             <option>2 (Disagree)</option>
                             <option>3 (Indiferent)</option>
@@ -162,11 +163,11 @@
                         <div class="dropdown-divider"></div>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="FormControlSelect9">
+                        <label for="Q9">
                             <h3 class="text-center text-info">Question 9</h3>
                             <h4>You like home meals and enjoy cooking or baking.</h4>
                         </label>
-                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="FormControlSelect9">
+                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q9">
                             <option>1 (Strongly Disagree)</option>
                             <option>2 (Disagree)</option>
                             <option>3 (Indiferent)</option>
@@ -176,12 +177,12 @@
                         <div class="dropdown-divider"></div>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="FormControlSelect10">
+                        <label for="Q10">
                             <h3 class="text-center text-info">Question 10</h3>
                             <h4>You have always wanted your own kids and can't wait for the right person to have them
                                 with!</h4>
                         </label>
-                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="FormControlSelect10">
+                        <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q10">
                             <option>1 (Strongly Disagree)</option>
                             <option>2 (Disagree)</option>
                             <option>3 (Indiferent)</option>
@@ -190,7 +191,7 @@
                         </select>
                         <div class="dropdown-divider"></div>
                     </div>
-                    <button class="btn btn-primary btn-lg btn-block mb-5 fa fa-rocket" type="button" id="submitBtn">
+                    <button type="button" id="submitBtn" class="btn btn-primary btn-lg btn-block mb-5 fa fa-rocket">
                         Submit
                     </button>
                 </div>
@@ -199,11 +200,13 @@
         </div>
     </div>
 
+    <!--Jquery/Link-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+    <!-- Bootsrap -->
+
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -211,8 +214,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    <!-- User javascript -->
-    <!-- <script src="./app.js"></script> -->
+
 </body>
 
 </html>
