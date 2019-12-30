@@ -20,19 +20,20 @@ $(document).ready(function () {
         answers.push(answerQ1, answerQ2, answerQ3, answerQ4, answerQ5, answerQ6, answerQ7, answerQ8, answerQ9, answerQ10)
         // console.log(answers);
 
-        const friendData = {
+        var friend = {
             'name': $("#name").val(),
-            'picture': $("#picture").val(),
+            'profilePic': $("#profilePic").val(),
             'answers': answers
         }
-        console.log(friendData);
+        console.log(friend)
 
-        // $.ajax({
-        //     type: 'POST',
-        //     url: '/api/friendData',
-        //     data: friendData
-        // }).then(res => {
-        //     console.log(res);
-        // });
-    });
+        $.ajax({
+            type: "POST",
+            url: "/api/friends",
+            data: friend
+        }).then(res => {
+            console.log(res)
+        })
+
+    })
 });
