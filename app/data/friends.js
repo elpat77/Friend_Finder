@@ -7,8 +7,8 @@
 var friendList = [
     {
         name: 'Patricio Aguilar',
-        profilePic: '',
-        scores: [
+        profilePic: 'https://www.facebook.com/photo.php?fbid=10151778139535227&set=a.10150298001455227&type=3&theater',
+        answers: [
             "4",
             "5",
             "5",

@@ -17,7 +17,7 @@ $(document).ready(function () {
         // console.log(answerName, answerPicture);
 
         var answers = [];
-        answers.push(answerQ1, answerQ2, answerQ3, answerQ4, answerQ5, answerQ6, answerQ7, answerQ8, answerQ9, answerQ10)
+        answers.push(parseInt(answerQ1), parseInt(answerQ2), parseInt(answerQ3), parseInt(answerQ4), parseInt(answerQ5), parseInt(answerQ6), parseInt(answerQ7), parseInt(answerQ8), parseInt(answerQ9), parseInt(answerQ10));
         // console.log(answers);
 
         var friend = {
