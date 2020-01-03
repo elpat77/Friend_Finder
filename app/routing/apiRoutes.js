@@ -3,48 +3,59 @@ const router = express.Router();
 
 const friends = require('../data/friends');
 
-class Friend {
-    constructor(name, profilePic, answers) {
-        this.name = name;
-        this.profilePic = profilePic;
-        this.answers = answers;
-    }
-
-}
-
-
-router.get("/", (req, res) => {
+// Return all friends found in friends.js
+router.get("/", function (req, res) {
     res.send(friends);
-    console.log("Res is working");
 });
+// console.log(friends);
 
-router.post("/", (req, res) => {
-    let matchScores = req.body.answers
-    let match = new Friend(req.body.name, req.body.profilePic, matchScores)
-    // console.log("MS", matchScores);
+router.post("/", function (req, res) {
+    // set a variable to receive the user data
+    var user = req.body;
+    console.log("user", user);
 
-    let score = 0;
+    // set a variable to keep the scores
+    // var matchScores = req.body.answers;
+    // var score = 0;
+    for (let i = 0; i < user.answers.length; i++) {
+        user.answers[i] = parseInt(user.answers[i]);
 
-    for (let i = 0; i < matchScores.length; i++) {
-        score += parseInt(matchScores[i]);
     }
-    // console.log(score)
+
+    //default friend match is the default user, results will be updated as more users join and default to whoever has the minimum difference in scores
+
+    var friendIndex = 0;
+    var minimumDifference = 40;
 
     for (let i = 0; i < friends.length; i++) {
-        console.log(friends.length)
-        // let matchScore = 0;
-        // for (let j = 0; j < friends.length; j++) {
-        //     console.log(friends.length)
-        // matchScore += friends[i].scores[j]
+        var scoreDifference = 0;
+        for (let j = 0; j < friends[i].answers.length; j++) {
+            var difference = Math.abs(user.answers[i] - friends[i].answers[j]);
+            scoreDifference += difference;
+            // console.log("default answers", friends[i].answers[j]);
+            // console.log("user answer", user.answers[i])
+            // console.log("difference", difference);
+            // console.log("total difference", scoreDifference);
 
-        // console.log(score);
-        // console.log(matchScore)
+        }
+        // if there is a new minimum, change the best friend index and set the new minimum for next iteration comparisons
+        if (scoreDifference < minimumDifference) {
+            friendIndex = i;
+            minimumDifference = scoreDifference;
+            console.log("friend index", friendIndex);
+            console.log("minimun dif", minimumDifference);
+
+        }
     }
 
-    // res.send("success");
+    // after finding match, add user to friend array
 
-    friends.push(match);
-    // console.log(friends)
+    friends.push(user);
+
+    // send back to browser the best friend match
+
+    res.send(friends[friendIndex]);
+    console.log("your friend match is ", friends[friendIndex]);
 })
 
 module.exports = router;
