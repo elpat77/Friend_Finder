@@ -25,15 +25,21 @@ $(document).ready(function () {
             'profilePic': $("#profilePic").val(),
             'answers': answers
         }
-        console.log(friend)
+        console.log("friend", friend)
 
         $.ajax({
             type: "POST",
             url: "/api/friends",
             data: friend
         }).then(res => {
-            console.log(res)
+            console.log("res", res.name)
+            $("#matchName").text(res.name);
+            $("#matchPicture").text(res.picture);
+            $("#matchModal").modal('toggle');
+
         })
 
     })
+
 });
+

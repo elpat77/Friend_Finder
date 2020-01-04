@@ -55,6 +55,7 @@
                                 see them. After all they are a very important part of your life.</h4>
                         </label>
                         <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q1">
+                            <option value="empty"></option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2 (Disagree)</option>
                             <option value="3">3 (Indiferent)</option>
@@ -69,6 +70,7 @@
                             <h4>Speaking of travel you are a globe trotter, traveling is very important for you!</h4>
                         </label>
                         <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q2">
+                            <option value="empty"></option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2 (Disagree)</option>
                             <option value="3">3 (Indiferent)</option>
@@ -83,6 +85,7 @@
                             <h4>You love animals and can't imagine living without a pet by your side!</h4>
                         </label>
                         <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q3">
+                            <option value="empty"></option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2 (Disagree)</option>
                             <option value="3">3 (Indiferent)</option>
@@ -97,6 +100,7 @@
                             <h4>Would you have your little toe surgically removed for $1,000,000?</h4>
                         </label>
                         <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q4">
+                            <option value="empty"></option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2 (Disagree)</option>
                             <option value="3">3 (Indiferent)</option>
@@ -111,6 +115,7 @@
                             <h4>You prefer to watch movies over reading books.</h4>
                         </label>
                         <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q5">
+                            <option value="empty"></option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2 (Disagree)</option>
                             <option value="3">3 (Indiferent)</option>
@@ -126,6 +131,7 @@
                             </h4>
                         </label>
                         <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q6">
+                            <option value="empty"></option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2 (Disagree)</option>
                             <option value="3">3 (Indiferent)</option>
@@ -140,6 +146,7 @@
                             <h4>Would you or have you ever go swimming with sharks?</h4>
                         </label>
                         <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q7">
+                            <option value="empty"></option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2 (Disagree)</option>
                             <option value="3">3 (Indiferent)</option>
@@ -154,6 +161,7 @@
                             <h4>You love tattoos and have a few of your own.</h4>
                         </label>
                         <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q8">
+                            <option value="empty"></option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2 (Disagree)</option>
                             <option value="3">3 (Indiferent)</option>
@@ -168,6 +176,7 @@
                             <h4>You like home meals and enjoy cooking or baking.</h4>
                         </label>
                         <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q9">
+                            <option value="empty"></option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2 (Disagree)</option>
                             <option value="3">3 (Indiferent)</option>
@@ -183,6 +192,7 @@
                                 with!</h4>
                         </label>
                         <select class="form-control bg-light offset-sm-4" style="width: 240px" id="Q10">
+                            <option value="empty"></option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2 (Disagree)</option>
                             <option value="3">3 (Indiferent)</option>
@@ -191,11 +201,30 @@
                         </select>
                         <div class="dropdown-divider"></div>
                     </div>
-                    <button type="button" id="submitBtn" class="btn btn-primary btn-lg btn-block mb-5 fa fa-rocket">
+                    <button id="submitBtn" type="submit" class="btn btn-primary btn-lg btn-block mb-5"><i
+                            class="fa fa-rocket" aria-hidden="true"></i>
                         Submit
                     </button>
                 </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Modal -->
+    <div id="matchModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your match is:</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <img id="matchPhoto" src="#">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>

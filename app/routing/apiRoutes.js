@@ -12,14 +12,10 @@ router.get("/", function (req, res) {
 router.post("/", function (req, res) {
     // set a variable to receive the user data
     var user = req.body;
-    console.log("user", user);
 
     // set a variable to keep the scores
-    // var matchScores = req.body.answers;
-    // var score = 0;
     for (let i = 0; i < user.answers.length; i++) {
         user.answers[i] = parseInt(user.answers[i]);
-
     }
 
     //default friend match is the default user, results will be updated as more users join and default to whoever has the minimum difference in scores
@@ -42,9 +38,8 @@ router.post("/", function (req, res) {
         if (scoreDifference < minimumDifference) {
             friendIndex = i;
             minimumDifference = scoreDifference;
-            console.log("friend index", friendIndex);
-            console.log("minimun dif", minimumDifference);
-
+            // console.log("friend index", friendIndex);
+            // console.log("minimun dif", minimumDifference);
         }
     }
 
