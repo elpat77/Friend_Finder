@@ -26,7 +26,7 @@ router.post("/", function (req, res) {
     for (let i = 0; i < friends.length; i++) {
         var scoreDifference = 0;
         for (let j = 0; j < friends[i].answers.length; j++) {
-            var difference = Math.abs(user.answers[i] - friends[i].answers[j]);
+            var difference = Math.abs(user.answers[j] - friends[i].answers[j]);
             scoreDifference += difference;
             // console.log("default answers", friends[i].answers[j]);
             // console.log("user answer", user.answers[i])
